@@ -25,4 +25,25 @@
         margin-top: 10px;
         color: v.$greyishViolet;
     }
+
+    .cards {
+        margin-top: 100px;
+        display: flex;
+        gap: 30px;
+
+        @media screen and (min-width: 768px) {
+            >:nth-child(2) {
+                margin-top: 40px;
+            }
+
+            >:nth-child(3) {
+                margin-top: 80px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 60px;
+        }
+    }
 }

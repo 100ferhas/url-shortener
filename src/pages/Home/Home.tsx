@@ -5,6 +5,7 @@ import Shortener from "../../components/Shortener/Shortener";
 import style from "./Home.module.scss";
 import History from "../../components/History/History";
 import Stats from "../../components/Stats/Stats";
+import Button from "../../components/Button/Button";
 
 const Home = () => {
     return (
@@ -21,7 +22,14 @@ const Home = () => {
             <div className={style.content}>
                 <History />
                 <Stats />
+
+                <div className={style.boost}>
+                    <div className={style.title}>Boost your links today</div>
+                    <Button href="#!" text="Get Started" type="primary" shape="rounded" />
+                </div>
             </div>
+
+            {/* <Footer /> */}
         </>
     );
 }

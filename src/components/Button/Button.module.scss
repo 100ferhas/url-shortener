@@ -26,7 +26,7 @@ a {
             color: #ffffff !important;
 
             &:hover {
-                background-color: lighten(v.$primaryCyan, 10);
+                background-color: lighten(v.$primaryCyan, 15);
             }
         }
 
@@ -36,7 +36,7 @@ a {
             color: #ffffff !important;
 
             &:hover {
-                background-color: lighten(v.$darkViolet, 10);
+                background-color: lighten(v.$darkViolet, 15);
             }
         }
     }

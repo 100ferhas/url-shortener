@@ -1,0 +1,83 @@
+@use "../../index.scss" as v;
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
+    height: 200px;
+    justify-content: space-between;
+
+    @media screen and (min-width: 1800px) {
+        height: 150px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        height: 250px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 40px 80px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: v.$primaryViolet;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        margin-top: -60px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+
+    .description {
+        font-size: .9em;
+        color: v.$greyishViolet;
+    }
+
+    @media screen and (max-width: 768px) {
+        &:not(:first-of-type):after {
+            content: "";
+            width: 5px;
+            height: 40px;
+            background: v.$primaryCyan;
+            position: absolute;
+            margin-top: -100px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &:not(:first-of-type):after {
+            content: "";
+            width: 30px;
+            height: 5px;
+            background: v.$primaryCyan;
+            position: absolute;
+            margin-top: 90px;
+            margin-left: -50px;
+        }
+
+        &:nth-child(3):after {
+            margin-top: 50px;
+        }
+    }
+}

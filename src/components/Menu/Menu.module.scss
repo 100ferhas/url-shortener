@@ -85,7 +85,7 @@
         text-decoration: none;
 
         &:hover {
-            color: darken(#ffffff, 20);
+            color: v.$primaryCyan;
             transition: all 0.1s;
         }
     }
