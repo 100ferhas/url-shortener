@@ -1,0 +1,28 @@
+@use "../../index.scss" as v;
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 10%;
+
+    @media screen and (max-width: 1024px) {
+        padding: 100px 5%;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 100px 20%;
+    }
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        max-width: 450px;
+        margin-top: 10px;
+        color: v.$greyishViolet;
+    }
+}

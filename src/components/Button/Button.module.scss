@@ -1,0 +1,43 @@
+@use '../../index' as v;
+
+a {
+    &.btn {
+        text-decoration: none;
+        text-align: center;
+        font-weight: 600;
+        padding: 10px 20px;
+        white-space: nowrap;
+
+        &.rounded {
+            border-radius: 50px;
+        }
+
+        &.square {
+            border-radius: 10px;
+        }
+
+        &.default {
+            border: 1px solid;
+        }
+
+        &.primary {
+            background-color: v.$primaryCyan;
+            border: none;
+            color: #ffffff !important;
+
+            &:hover {
+                background-color: lighten(v.$primaryCyan, 10);
+            }
+        }
+
+        &.dark {
+            background-color: v.$darkViolet;
+            border: none;
+            color: #ffffff !important;
+
+            &:hover {
+                background-color: lighten(v.$darkViolet, 10);
+            }
+        }
+    }
+}

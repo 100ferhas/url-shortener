@@ -1,0 +1,10 @@
+@use '../../index.scss' as v;
+
+.content {
+    background-color: #f0f1f6;
+    position: absolute;
+    width: 100%;
+    margin-top: -115px;
+    padding-top: 100px;
+    z-index: -1;
+}
