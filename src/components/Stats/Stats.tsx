@@ -9,8 +9,6 @@ const Stats = () => {
         <span className={style.title}>Advanced Statistics</span>
         <span className={style.subtitle}>Track how your links are performing across the web with our advanced statistics dashboard.</span>
 
-
-
         <div className={style.cards}>
             <Card icon={icon_brand} title="Brand Recognition"
                 description="Boost your brand recogniton with each click. Generic links don't mean a thing. Branded links help instil confidence in your content." />
@@ -19,9 +17,6 @@ const Stats = () => {
             <Card icon={icon_customzable} title="Fully Customizable"
                 description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement." />
         </div>
-
-
-
     </div>
 }
 

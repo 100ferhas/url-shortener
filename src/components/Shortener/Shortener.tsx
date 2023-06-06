@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Button from '../Button/Button';
 import style from './Shortener.module.scss';
 import { HISTORY_KEY, saveHistory } from "../../service/storage";
 
-const Shortener = () => {
+const Shortener = (props: {
+    inputShortenerRef: React.RefObject<HTMLInputElement>,
+}) => {
     const [link, setLink] = useState<string>("");
     const [error, setError] = useState<string>("");
 
@@ -14,6 +16,7 @@ const Shortener = () => {
             '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
             '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
             '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+
         return !!pattern.test(link);
     }
 
@@ -40,7 +43,7 @@ const Shortener = () => {
         <div className={style.shortener}>
             <div className={style.form}>
                 <div className={style.input}>
-                    <input value={link} autoFocus={true} type="text" placeholder='Shorten a link here...'
+                    <input value={link} autoFocus={true} type="text" placeholder='Shorten a link here...' ref={props.inputShortenerRef}
                         onChange={(e) => setLink(e.target.value)} className={`${style.field} ${error ? style.error : ''}`} />
                     <small className={style.error}>
                         {error}&nbsp;

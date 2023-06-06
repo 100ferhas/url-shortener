@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Banner from "../../components/Banner/Banner";
 import Menu from "../../components/Menu/Menu";
 import illustration from "../../assets/images/illustration-working.svg";
@@ -9,6 +10,13 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
+    const inputShortener = useRef<HTMLInputElement>(null);
+
+    const scrollToInput = () => {
+        inputShortener?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        inputShortener?.current?.focus({ preventScroll: true });
+    }
+
     return (
         <>
             <Menu />
@@ -16,9 +24,10 @@ const Home = () => {
             <Banner
                 title="More than just shorter links"
                 subtitle="Build your brand's recognition and get detailed insights on how your links are performing"
+                buttonText="Get Started"
                 image={illustration} />
 
-            <Shortener />
+            <Shortener inputShortenerRef={inputShortener} />
 
             <div className={style.content}>
                 <History />
@@ -26,8 +35,7 @@ const Home = () => {
 
                 <div className={style.boost}>
                     <div className={style.title}>Boost your links today</div>
-                    <Button href="#!" text="Get Started" type="primary" shape="rounded" />
-
+                    <Button href="#!" onClick={scrollToInput} text="Get Started" type="primary" shape="rounded" />
                 </div>
             </div>
 

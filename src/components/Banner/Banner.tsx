@@ -5,7 +5,7 @@ const Banner = (props: {
     title: string,
     subtitle: string,
     image: string,
-    ref?: any,
+    buttonText: string,
 }) => {
 
     return (
@@ -14,7 +14,7 @@ const Banner = (props: {
                 <div className={style.content}>
                     <h1>{props.title}</h1>
                     <p>{props.subtitle}</p>
-                    <Button href='#' text='Get Started' type='primary' />
+                    <Button href='#' text={props.buttonText} type='primary' />
                 </div>
             </div>
 

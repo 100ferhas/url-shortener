@@ -11,11 +11,6 @@ const History = () => {
     const [activeButtonIndex, setActiveButtonIndex] = useState<number>(-1);
     const [timeoutElement, setTimeoutElement] = useState<NodeJS.Timeout>();
 
-    const updateHistory = () => {
-        const history = readHistory(window.localStorage);
-        setHistory(history);
-    }
-
     useEffect(() => {
         updateHistory();
 
@@ -30,6 +25,15 @@ const History = () => {
 
     }, []);
 
+    const updateHistory = () => {
+        const history = readHistory(window.localStorage);
+        setHistory(history);
+    }
+
+    const buildHref = (link: string) => {
+        return link.startsWith("http") ? link : `//${link}`;
+    }
+
     return <div className={style.history}>
         {
             history.map((el: IShorten, index: number) => {
@@ -37,7 +41,7 @@ const History = () => {
                     <div className={style.long}>{el.inputLink}</div>
                     <hr />
                     <div className={style.short}>
-                        <a href={`//${el.shortenLink}`} target="_blank" rel="noreferrer">
+                        <a href={buildHref(el.shortenLink)} target="_blank" rel="noreferrer">
                             {el.shortenLink}
                         </a>
                     </div>
