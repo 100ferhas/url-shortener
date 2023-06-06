@@ -6,6 +6,7 @@ import style from "./Home.module.scss";
 import History from "../../components/History/History";
 import Stats from "../../components/Stats/Stats";
 import Button from "../../components/Button/Button";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
     return (
@@ -26,10 +27,11 @@ const Home = () => {
                 <div className={style.boost}>
                     <div className={style.title}>Boost your links today</div>
                     <Button href="#!" text="Get Started" type="primary" shape="rounded" />
+
                 </div>
             </div>
 
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

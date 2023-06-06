@@ -1,5 +1,5 @@
 import style from "./Menu.module.scss";
-import logo from "./../../assets/images/logo.svg";
+import { ReactComponent as Logo } from "./../../assets/images/logo.svg";
 import Button from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +12,7 @@ const Menu = () => {
         <>
             <div className={style.menu}>
                 <div className={style.left_menu}>
-                    <a href="#!"><img src={logo} alt="logo" /></a>
+                    <a href="#!"><Logo className={style.logo} /></a>
                     <a href="#!">Features</a>
                     <a href="#!">Pricing</a>
                     <a href="#!">Resources</a>
@@ -24,7 +24,7 @@ const Menu = () => {
                 </div>
 
                 <div className={style.mobile_menu}>
-                    <a href="#!"><img src={logo} alt="logo" /></a>
+                    <a href="#!"><Logo className={style.logo} /></a>
                     <a href="#!" onClick={() => setOpen(!open)}>
                         {
                             open && <FontAwesomeIcon icon={faXmark} size="2x" />

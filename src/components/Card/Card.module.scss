@@ -54,18 +54,7 @@
         color: v.$greyishViolet;
     }
 
-    @media screen and (max-width: 768px) {
-        &:not(:first-of-type):after {
-            content: "";
-            width: 5px;
-            height: 40px;
-            background: v.$primaryCyan;
-            position: absolute;
-            margin-top: -100px;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
         &:not(:first-of-type):after {
             content: "";
             width: 30px;
@@ -80,4 +69,17 @@
             margin-top: 50px;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        &:not(:first-of-type):after {
+            content: "";
+            width: 5px;
+            height: 40px;
+            background: v.$primaryCyan;
+            position: absolute;
+            margin-top: -100px;
+        }
+    }
+
+
 }

@@ -1,0 +1,75 @@
+@use "../../index.scss" as v;
+
+.footer {
+    background-color: v.$darkViolet;
+    padding: 50px 10%;
+    color: #ffffff;
+    display: flex;
+
+    @media screen and (max-width: 1024px) {
+        padding: 50px 5%;
+    }
+
+    @media screen and (min-width: 1281px) {
+        padding: 50px 20%;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+
+        .logo {
+            fill: white;
+        }
+
+        a {
+            color: v.$grey;
+            text-decoration: none;
+        }
+
+        .title {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .large {
+        flex: 2;
+    }
+
+    .socials {
+        display: flex;
+        gap: 20px;
+
+        a {
+            height: min-content;
+        }
+
+        svg {
+            fill: white;
+        }
+    }
+
+    a {
+        width: min-content;
+        white-space: nowrap;
+
+        &:hover {
+            color: v.$primaryCyan;
+
+            svg {
+                fill: v.$primaryCyan;
+            }
+        }
+    }
+}

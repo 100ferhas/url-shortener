@@ -2,24 +2,21 @@
 
 .content {
     background-color: #f0f1f6;
-    position: absolute;
-    width: 100%;
     margin-top: -115px;
     padding-top: 100px;
-    z-index: -1;
 
     .boost {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        padding: 40px 20px;
+        padding: 60px 20px;
         background-color: v.$primaryViolet;
         background-image: url('../../assets/images/bg-boost-desktop.svg');
         background-size: cover;
         align-items: center;
 
         .title {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             font-weight: bold;
             color: white;
         }
