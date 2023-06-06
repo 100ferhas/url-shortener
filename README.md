@@ -1,3 +1,5 @@
-URL Shortener React Project
+### URL Shortener 
 
-DEMO URL: https://shortly-100ferhas.vercel.app/
+React URL Shortener concept app
+
+**DEMO URL:** https://shortly-100ferhas.vercel.app/
