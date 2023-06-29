@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import Button from '../Button/Button';
 import style from './Shortener.module.scss';
 import { HISTORY_KEY, saveHistory } from "../../service/storage";

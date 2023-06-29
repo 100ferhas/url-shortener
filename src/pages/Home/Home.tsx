@@ -25,6 +25,7 @@ const Home = () => {
                 title="More than just shorter links"
                 subtitle="Build your brand's recognition and get detailed insights on how your links are performing"
                 buttonText="Get Started"
+                buttonOnClick={scrollToInput}
                 image={illustration} />
 
             <Shortener inputShortenerRef={inputShortener} />

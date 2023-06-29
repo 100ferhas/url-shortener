@@ -1,3 +1,4 @@
+import { MouseEventHandler } from 'react';
 import Button from '../Button/Button';
 import style from './Banner.module.scss';
 
@@ -6,6 +7,7 @@ const Banner = (props: {
     subtitle: string,
     image: string,
     buttonText: string,
+    buttonOnClick: MouseEventHandler<Element>,
 }) => {
 
     return (
@@ -14,7 +16,7 @@ const Banner = (props: {
                 <div className={style.content}>
                     <h1>{props.title}</h1>
                     <p>{props.subtitle}</p>
-                    <Button href='#' text={props.buttonText} type='primary' />
+                    <Button href='#!' onClick={props.buttonOnClick} text={props.buttonText} type='primary' />
                 </div>
             </div>
 
